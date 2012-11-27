@@ -49,7 +49,7 @@
     //从openGL纹理中读取的像素是上下倒置的
     GLubyte* upsideDownPixels =  malloc(width *height * sizeof(GLubyte) * 4);
     //还原后正确的像素信息
-    GLubyte* pixels = malloc(width *height * sizeof(GLubyte) * 4);
+//    GLubyte* pixels = malloc(width *height * sizeof(GLubyte) * 4);
     
     CGPoint  anchopoint =  self.anchorPoint;
     
@@ -61,18 +61,18 @@
     [renderTexture end];
     renderSprite.anchorPoint = anchopoint;
     
-    for(int y = 0; y <width; y++)
-    {
-        for(int x = 0; x <height * 4; x++)
-        {
-            pixels[(height - y) * width * 4 + x] = upsideDownPixels[y * 4 * width + x];
-        }
-    }
-    
-    free(upsideDownPixels);
+//    for(int y = 0; y <width; y++)
+//    {
+//        for(int x = 0; x <height * 4; x++)
+//        {
+//            pixels[(height - y) * width * 4 + x] = upsideDownPixels[y * 4 * width + x];
+//        }
+//    }
+//    
+//    free(upsideDownPixels);
     
     //pixels 的内存在CCTexture2DMutable的 dealloc时将释放    
-    CCTexture2DMutable * mutableTexture = [[CCTexture2DMutable alloc] initWithData:pixels
+    CCTexture2DMutable * mutableTexture = [[CCTexture2DMutable alloc] initWithData:upsideDownPixels
                                                                        pixelFormat:kTexture2DPixelFormat_RGBA8888
                                                                         pixelsWide:width
                                                                         pixelsHigh:height

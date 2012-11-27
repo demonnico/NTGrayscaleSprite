@@ -44,24 +44,32 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+//		label.position =  ccp( size.width /2 , size.height/2 );
 		
 		// add the label as a child to this Layer
-		[self addChild: label];
-    
+//		[self addChild: label];
+        CCMenuItemLabel * labelItem  =[CCMenuItemLabel itemWithLabel:label
+                                                          target:self
+                                                        selector:@selector(playAnimation)];
+        CCMenu * menu  =[CCMenu menuWithItems:labelItem, nil];
+        [self addChild:menu];
+        menu.position = ccp( size.width /2 , size.height/2 );
         
-        CCSprite * otherSprite =[CCSprite spriteWithFile:@"Icon.png"];        
-        [self addChild:otherSprite];
+        
+        animationSprite =[CCSprite spriteWithFile:@"Icon.png"];
+        [self addChild:animationSprite];
 
-        otherSprite.position = ccp(100, 200);
-      
-
-        CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
-        [otherSprite runAction:fadeOut];
+        animationSprite.position = ccp(100, 200);
         
         
 	}
 	return self;
+}
+
+-(void)playAnimation
+{
+    CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
+    [animationSprite runAction:fadeOut];
 }
 
 +(UIImage*)getUIImageFromData:(void*)data

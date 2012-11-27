@@ -7,7 +7,7 @@
 #import "CCTexture2D.h"
 #import "ccTypes.h"
 
-#define CC_MUTABLE_TEXTURE_SAVE_ORIGINAL_DATA 0
+#define CC_MUTABLE_TEXTURE_SAVE_ORIGINAL_DATA 1
 
 @interface CCTexture2DMutable : CCTexture2D
 {
@@ -20,6 +20,7 @@
 }
 #if CC_MUTABLE_TEXTURE_SAVE_ORIGINAL_DATA
 @property(nonatomic, readonly) void *originalTexData;
+- (void) restore;
 #endif
 @property(nonatomic, readwrite) void *texData;
 

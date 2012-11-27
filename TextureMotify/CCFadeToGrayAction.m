@@ -32,8 +32,9 @@
 	return self;
 }
 
--(void)update:(ccTime)time
+-(void) startWithTarget:(id)aTarget
 {
+    [super startWithTarget:aTarget];
     CCSprite * target = (CCSprite*)target_;
     if(!mutableTexture)
     {
@@ -42,11 +43,24 @@
             NSLog(@"taget Error, must be a CCSprite target！");
             return;
         }
+        if([target.texture isKindOfClass:[CCTexture2DMutable class]])
+        {
+            CCTexture2DMutable * mutableOrigin  = (CCTexture2DMutable*)target.texture;
+            [mutableOrigin restore];
+        }
         mutableTexture  = [target getMutableTexture];
         [mutableTexture retain];
+        //解决像素获取后在屏幕上显示倒置的问题
+        target.scaleY = -target.scaleY;
     }
+}
+
+-(void)update:(ccTime)time
+{
+    CCSprite * target = (CCSprite*)target_;
     int width  = target.contentSizeInPixels.width;
     int height = target.contentSizeInPixels.height;
+    
     for (int i=0;i<width; i++)
     {
         for(int j=0;j<height;j++)
