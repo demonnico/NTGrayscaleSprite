@@ -2,14 +2,16 @@
 //  HelloWorldLayer.m
 //  TextureMotify
 //
-//  Created by Tau Nicholas on 11/5/12.
+//  Created by demon on 11/6/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
-
+#import "CCTexture2DMutable.h"
+#import "CCSprite+FadeToGrayAction.h"
+#import "CCFadeToGrayAction.h"
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -46,8 +48,44 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+    
+        
+        CCSprite * otherSprite =[CCSprite spriteWithFile:@"Icon.png"];        
+        [self addChild:otherSprite];
+
+        otherSprite.position = ccp(100, 200);
+      
+
+        CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
+        [otherSprite runAction:fadeOut];
+        
+        
 	}
 	return self;
+}
+
++(UIImage*)getUIImageFromData:(void*)data
+                        width:(int)w
+                       height:(int)h
+{
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL,
+                                                              data,
+                                                              h*w*sizeof(uint32_t),
+                                                              NULL);
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault| kCGImageAlphaLast;
+    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+    
+    CGImageRef imageRef = CGImageCreate(w,
+                                        h,
+                                        8,
+                                        32,
+                                        4*w,
+                                        colorSpaceRef,
+                                        bitmapInfo,
+                                        provider,NULL,NO,renderingIntent);
+    
+    return [UIImage imageWithCGImage:imageRef];
 }
 
 // on "dealloc" you need to release all your retained objects
