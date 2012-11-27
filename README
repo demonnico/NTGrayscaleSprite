@@ -1,0 +1,7 @@
+CCSprite  *animationSprite =[CCSprite spriteWithFile:@"Icon.png"];
+[self addChild:animationSprite];
+animationSprite.position = ccp(100, 200);
+
+/***动画对象target目前只允许CCSprite***/
+CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
+[animationSprite runAction:fadeOut];
