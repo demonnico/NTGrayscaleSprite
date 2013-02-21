@@ -11,7 +11,7 @@
 #import "HelloWorldLayer.h"
 #import "CCTexture2DMutable.h"
 #import "CCSprite+FadeToGrayAction.h"
-#import "CCFadeToGrayAction.h"
+#import "NTFadeToGrayAction.h"
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -68,7 +68,7 @@
 
 -(void)playAnimation
 {
-    CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
+    NTFadeToGrayAction * fadeOut = [NTFadeToGrayAction actionWithDuration:3.0];
     [animationSprite runAction:fadeOut];
 }
 
