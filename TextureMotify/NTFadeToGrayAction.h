@@ -9,7 +9,7 @@
 #import "CCActionInterval.h"
 #import "CCTexture2DMutable.h"
 
-@interface CCFadeToGrayAction : CCActionInterval
+@interface NTFadeToGrayAction : CCActionInterval
 {
     CCTexture2DMutable * mutableTexture;
 }

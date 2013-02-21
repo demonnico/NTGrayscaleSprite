@@ -6,9 +6,9 @@
 //
 //
 
-#import "CCFadeToGrayAction.h"
+#import "NTFadeToGrayAction.h"
 #import "CCSprite+FadeToGrayAction.h"
-@implementation CCFadeToGrayAction
+@implementation NTFadeToGrayAction
 
 - (void)dealloc
 {
@@ -19,7 +19,7 @@
 
 +(id)actionWithDuration:(CGFloat)duration
 {
-    return [[[CCFadeToGrayAction alloc] initWithDuration:duration] autorelease];
+    return [[[NTFadeToGrayAction alloc] initWithDuration:duration] autorelease];
 }
 
 

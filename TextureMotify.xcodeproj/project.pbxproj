@@ -126,7 +126,7 @@
 		287452F31647E12600875BF4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 287452F21647E12600875BF4 /* HelloWorldLayer.m */; };
 		28745315164802C300875BF4 /* CCTexture2DMutable.m in Sources */ = {isa = PBXBuildFile; fileRef = 287453101647FE9900875BF4 /* CCTexture2DMutable.m */; };
 		28C27D9F16494274001BD363 /* CCSprite+FadeToGrayAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C27D9E16494274001BD363 /* CCSprite+FadeToGrayAction.m */; };
-		64FD1A2916648197009C4593 /* CCFadeToGrayAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FD1A2816648197009C4593 /* CCFadeToGrayAction.m */; };
+		64FD1A2916648197009C4593 /* NTFadeToGrayAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FD1A2816648197009C4593 /* NTFadeToGrayAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -371,8 +371,8 @@
 		287453101647FE9900875BF4 /* CCTexture2DMutable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTexture2DMutable.m; sourceTree = "<group>"; };
 		28C27D9D16494274001BD363 /* CCSprite+FadeToGrayAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+FadeToGrayAction.h"; sourceTree = "<group>"; };
 		28C27D9E16494274001BD363 /* CCSprite+FadeToGrayAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+FadeToGrayAction.m"; sourceTree = "<group>"; };
-		64FD1A2716648196009C4593 /* CCFadeToGrayAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFadeToGrayAction.h; sourceTree = "<group>"; };
-		64FD1A2816648197009C4593 /* CCFadeToGrayAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFadeToGrayAction.m; sourceTree = "<group>"; };
+		64FD1A2716648196009C4593 /* NTFadeToGrayAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFadeToGrayAction.h; sourceTree = "<group>"; };
+		64FD1A2816648197009C4593 /* NTFadeToGrayAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFadeToGrayAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +429,7 @@
 		287451991647E11100875BF4 /* TextureMotify */ = {
 			isa = PBXGroup;
 			children = (
+				288A1B3D16D64D6000AFECE7 /* NTTexureMotify */,
 				287452EB1647E12400875BF4 /* AppDelegate.h */,
 				287452EC1647E12500875BF4 /* AppDelegate.m */,
 				287452EE1647E12600875BF4 /* RootViewController.h */,
@@ -437,10 +438,6 @@
 				287453101647FE9900875BF4 /* CCTexture2DMutable.m */,
 				287452F11647E12600875BF4 /* HelloWorldLayer.h */,
 				287452F21647E12600875BF4 /* HelloWorldLayer.m */,
-				64FD1A2716648196009C4593 /* CCFadeToGrayAction.h */,
-				64FD1A2816648197009C4593 /* CCFadeToGrayAction.m */,
-				28C27D9D16494274001BD363 /* CCSprite+FadeToGrayAction.h */,
-				28C27D9E16494274001BD363 /* CCSprite+FadeToGrayAction.m */,
 				287452F41647E12600875BF4 /* GameConfig.h */,
 				2874519A1647E11100875BF4 /* Resources */,
 				287451AE1647E11100875BF4 /* libs */,
@@ -779,6 +776,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		288A1B3D16D64D6000AFECE7 /* NTTexureMotify */ = {
+			isa = PBXGroup;
+			children = (
+				64FD1A2716648196009C4593 /* NTFadeToGrayAction.h */,
+				64FD1A2816648197009C4593 /* NTFadeToGrayAction.m */,
+				28C27D9D16494274001BD363 /* CCSprite+FadeToGrayAction.h */,
+				28C27D9E16494274001BD363 /* CCSprite+FadeToGrayAction.m */,
+			);
+			name = NTTexureMotify;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -950,7 +958,7 @@
 				287452F31647E12600875BF4 /* HelloWorldLayer.m in Sources */,
 				28745315164802C300875BF4 /* CCTexture2DMutable.m in Sources */,
 				28C27D9F16494274001BD363 /* CCSprite+FadeToGrayAction.m in Sources */,
-				64FD1A2916648197009C4593 /* CCFadeToGrayAction.m in Sources */,
+				64FD1A2916648197009C4593 /* NTFadeToGrayAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
