@@ -1,5 +1,4 @@
-
-######	让你能够直接对cocos2d中的sprite对象做RGB到Grayscale的动画
+######	it makes a CCSprite from a RGB to grayscale easily.
 
 #How To Use
 
@@ -17,4 +16,4 @@ CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
 ```
 
 #TODO
-对同一sprite对象进行多次动画后材质的失真问题
+it's a little strange that if make many times grayscale animation for one sprite.
