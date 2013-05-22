@@ -434,8 +434,6 @@
 				287452EC1647E12500875BF4 /* AppDelegate.m */,
 				287452EE1647E12600875BF4 /* RootViewController.h */,
 				287452EF1647E12600875BF4 /* RootViewController.m */,
-				2874530F1647FE9900875BF4 /* CCTexture2DMutable.h */,
-				287453101647FE9900875BF4 /* CCTexture2DMutable.m */,
 				287452F11647E12600875BF4 /* HelloWorldLayer.h */,
 				287452F21647E12600875BF4 /* HelloWorldLayer.m */,
 				287452F41647E12600875BF4 /* GameConfig.h */,
@@ -779,6 +777,8 @@
 		288A1B3D16D64D6000AFECE7 /* NTTexureMotify */ = {
 			isa = PBXGroup;
 			children = (
+				2874530F1647FE9900875BF4 /* CCTexture2DMutable.h */,
+				287453101647FE9900875BF4 /* CCTexture2DMutable.m */,
 				64FD1A2716648196009C4593 /* NTFadeToGrayAction.h */,
 				64FD1A2816648197009C4593 /* NTFadeToGrayAction.m */,
 				28C27D9D16494274001BD363 /* CCSprite+FadeToGrayAction.h */,
