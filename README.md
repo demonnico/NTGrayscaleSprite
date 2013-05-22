@@ -2,6 +2,7 @@
 
 #How To Use
 
+![](https://raw.github.com/demon1105/ImagesLib/master/demo.gif)
 
 ```
 CCSprite  *animationSprite =[CCSprite spriteWithFile:@"Icon.png"];
@@ -9,7 +10,7 @@ CCSprite  *animationSprite =[CCSprite spriteWithFile:@"Icon.png"];
 animationSprite.position = ccp(100, 200);
 
 
-/***动画对象target目前只允许CCSprite***/
+/***as far as now, just support for CCSprite***/
 CCFadeToGrayAction * fadeOut = [CCFadeToGrayAction actionWithDuration:3.0];
 [animationSprite runAction:fadeOut];
 
